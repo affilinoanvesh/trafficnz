@@ -109,7 +109,7 @@ export default function EmailModal({
           <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
             <div className="text-sm font-medium text-gray-500 mb-1">Selected plan:</div>
             <div className="text-xl font-bold text-gray-900 mb-1">
-              Boost SEO - {planName}
+              Rankings Boost - {planName}
             </div>
             <div className="text-2xl font-black text-orange-600">
               ${planPrice.toFixed(2)} NZD

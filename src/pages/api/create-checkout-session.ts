@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 
 // Validate environment variables at startup
 const stripeSecretKey = import.meta.env.STRIPE_SECRET_KEY;
-const rawSiteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://boostseo.co.nz';
+const rawSiteUrl = import.meta.env.SITE_URL || import.meta.env.PUBLIC_SITE_URL || 'https://rankingsboost.co.nz';
 // Remove trailing slash to prevent double slashes in URLs
 const siteUrl = rawSiteUrl.replace(/\/$/, '');
 

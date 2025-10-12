@@ -10,7 +10,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout 
-  title="Payment Confirmed - Boost SEO"
+  title="Payment Confirmed - Rankings Boost"
   description="Your payment has been processed successfully. Your traffic boost campaign will start soon."
 >
   <Header />
@@ -32,7 +32,7 @@ import Footer from '../components/Footer.astro';
             CONFIRMED!
           </h1>
           <p class="text-lg text-gray-600 mb-6">
-            Thank you for choosing Boost SEO! Your payment has been processed successfully.
+            Thank you for choosing Rankings Boost! Your payment has been processed successfully.
           </p>
         </div>
         
@@ -191,7 +191,7 @@ import Footer from '../components/Footer.astro';
         window.dataLayer.push({
           event: 'purchase_completed',
           event_category: 'ecommerce',
-          event_label: 'boost_seo_purchase',
+          event_label: 'rankings_boost_purchase',
           purchase_data: {
             transaction_id: paymentData.paymentId || sessionId,
             session_id: sessionId,
@@ -397,7 +397,7 @@ import Footer from '../components/Footer.astro';
                 window.dataLayer.push({
                   event: 'project_form_completed',
                   event_category: 'form',
-                  event_label: 'boost_seo_project_setup',
+                  event_label: 'rankings_boost_project_setup',
                   form_data: {
                     transaction_id: paymentData.paymentId || sessionId,
                     session_id: sessionId,

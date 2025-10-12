@@ -15,7 +15,7 @@ export function renderSimpleOrderEmailHTML(props: SimpleOrderEmailProps): string
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Confirmation - Boost SEO New Zealand</title>
+  <title>Payment Confirmation - Rankings Boost New Zealand</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -70,7 +70,7 @@ export function renderSimpleOrderEmailHTML(props: SimpleOrderEmailProps): string
 <body>
   <div class="container">
     <div class="header">
-      <h1>Boost SEO New Zealand</h1>
+      <h1>Rankings Boost New Zealand</h1>
       <p>Payment Confirmation</p>
     </div>
     
@@ -99,7 +99,7 @@ export function renderSimpleOrderEmailHTML(props: SimpleOrderEmailProps): string
     </div>
     
     <div class="footer">
-      <p><strong>Boost SEO New Zealand</strong></p>
+      <p><strong>Rankings Boost New Zealand</strong></p>
       <p>Questions? Contact us: hello@rankingsboost.co.nz</p>
     </div>
   </div>

@@ -4,7 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  SITE_URL = "https://boostseo.co.nz"
+  SITE_URL = "https://rankingsboost.co.nz"
 
 # Build optimization
 [build.processing]
@@ -21,7 +21,7 @@
 # Domain redirects - redirect old domain to new domain (2025 best practices)
 [[redirects]]
   from = "https://trafficbr.netlify.app/*"
-  to = "https://boostseo.co.nz/:splat"
+  to = "https://rankingsboost.co.nz/:splat"
   status = 301
   force = true
 

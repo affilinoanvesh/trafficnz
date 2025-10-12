@@ -31,7 +31,7 @@ export async function sendOrderConfirmationEmail(orderData: OrderConfirmationDat
       };
     }
 
-    const projectFormUrl = `${import.meta.env.SITE_URL || 'https://boostseo.co.nz'}/success?session_id=${orderData.sessionId}`;
+    const projectFormUrl = `${import.meta.env.SITE_URL || 'https://rankingsboost.co.nz'}/success?session_id=${orderData.sessionId}`;
 
     // Generate simple email HTML
     const emailHTML = renderSimpleOrderEmailHTML({
@@ -44,7 +44,7 @@ export async function sendOrderConfirmationEmail(orderData: OrderConfirmationDat
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'Boost SEO New Zealand <noreply@rankingsboost.co.nz>',
+      from: 'Rankings Boost New Zealand <noreply@rankingsboost.co.nz>',
       to: [orderData.customerEmail],
       subject: `Payment Confirmation - ${orderData.planName}`,
       html: emailHTML,
