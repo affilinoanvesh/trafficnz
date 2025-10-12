@@ -100,7 +100,7 @@ export function renderSimpleOrderEmailHTML(props: SimpleOrderEmailProps): string
     
     <div class="footer">
       <p><strong>Boost SEO New Zealand</strong></p>
-      <p>Questions? Contact us: contact@boostseo.co.nz</p>
+      <p>Questions? Contact us: hello@rankingsboost.co.nz</p>
     </div>
   </div>
 </body>

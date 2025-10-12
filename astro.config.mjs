@@ -7,7 +7,7 @@ import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://boostseo.co.nz', // Production domain
+  site: 'https://rankingsboost.co.nz', // Production domain
   output: 'server',
   adapter: netlify(),
   

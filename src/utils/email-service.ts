@@ -44,11 +44,11 @@ export async function sendOrderConfirmationEmail(orderData: OrderConfirmationDat
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'Boost SEO New Zealand <noreply@boostseo.co.nz>',
+      from: 'Boost SEO New Zealand <noreply@rankingsboost.co.nz>',
       to: [orderData.customerEmail],
       subject: `Payment Confirmation - ${orderData.planName}`,
       html: emailHTML,
-      replyTo: 'contact@boostseo.co.nz'
+      replyTo: 'hello@rankingsboost.co.nz'
     });
 
     if (error) {

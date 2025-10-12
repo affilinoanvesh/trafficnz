@@ -65,7 +65,7 @@ export const POST: APIRoute = async ({ request }) => {
       // Additional Formspree fields
       _subject: `New SEO Campaign - ${submitData['Plan']} - ${submitData['Email']}`,
       _replyto: submitData['Email'],
-      _cc: 'contact@boostseo.co.nz' // Optional: CC to your support email
+      _cc: 'hello@rankingsboost.co.nz' // Optional: CC to your support email
     };
 
     // Submit to Formspree
