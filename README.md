@@ -106,23 +106,6 @@ SITE_URL=https://yourdomain.com
 3. Set up webhook endpoints for payment processing
 4. Configure products and pricing in your Stripe dashboard
 
-#### How to Check Your Stripe API Version
-
-**In Stripe Dashboard:**
-1. Go to [Stripe Dashboard](https://dashboard.stripe.com/)
-2. Click **Developers** in the left menu
-3. Click **API version**
-4. You'll see your current API version and can upgrade if needed
-
-**In Your Code:**
-- Current version set in code: `2025-09-30.clover`
-- Check files: `src/pages/api/create-checkout-session.ts`, `webhook.ts`, `get-session.ts`
-
-**To Update API Version:**
-1. Check [Stripe Changelog](https://docs.stripe.com/changelog) for new versions
-2. Update the `apiVersion` in all three API files
-3. Test thoroughly before deploying
-
 ## 🚀 Deployment
 
 This project is configured for Netlify deployment:
