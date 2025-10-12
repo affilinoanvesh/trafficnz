@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import Stripe from 'stripe';
 
 const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-06-30.basil' as Stripe.StripeConfig['apiVersion'], // Latest 2025 API version
+  apiVersion: '2025-09-30.clover' as Stripe.StripeConfig['apiVersion'], // Latest 2025 API version
   typescript: true,
 });
 

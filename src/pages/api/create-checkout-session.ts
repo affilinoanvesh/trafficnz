@@ -13,7 +13,7 @@ if (!stripeSecretKey) {
 
 // Initialize Stripe with current 2025 API version
 const stripe = stripeSecretKey ? new Stripe(stripeSecretKey, {
-  apiVersion: '2025-06-30.basil' as Stripe.StripeConfig['apiVersion'], // Latest 2025 API version
+  apiVersion: '2025-09-30.clover' as Stripe.StripeConfig['apiVersion'], // Latest 2025 API version
   typescript: true,
 }) : null;
 
