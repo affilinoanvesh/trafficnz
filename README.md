@@ -1,6 +1,6 @@
 # SEO Boost Service - New Zealand
 
-A modern, fast, and SEO-optimized website built with Astro.js for providing SEO ranking boost services.
+A modern, fast, and SEO-optimised website built with Astro.js for providing SEO ranking boost services.
 
 ## 🚀 Features
 
