@@ -117,17 +117,17 @@ export function renderAdminOrderNotificationHTML(props: AdminOrderNotificationPr
 <body>
   <div class="container">
     <div class="header">
-      <h1>🎉 New Order Received!</h1>
+      <h1>New Order Received</h1>
       <p>A customer has completed their payment and submitted project details</p>
     </div>
     
     <div class="content">
       <div class="alert">
-        <strong>⚡ Action Required:</strong> A new SEO campaign is ready for execution. Please review and start the campaign.
+        <strong>Action Required:</strong> A new SEO campaign is ready for execution. Please review and start the campaign.
       </div>
       
       <div class="section">
-        <div class="section-title">💰 Payment Information</div>
+        <div class="section-title">Payment Information</div>
         <div class="detail-row">
           <span class="detail-label">Plan:</span>
           <span class="detail-value"><strong>${planName}</strong></span>
@@ -147,7 +147,7 @@ export function renderAdminOrderNotificationHTML(props: AdminOrderNotificationPr
       </div>
       
       <div class="section">
-        <div class="section-title">👤 Customer Information</div>
+        <div class="section-title">Customer Information</div>
         <div class="detail-row">
           <span class="detail-label">Name:</span>
           <span class="detail-value">${customerName || 'Not provided'}</span>
@@ -159,7 +159,7 @@ export function renderAdminOrderNotificationHTML(props: AdminOrderNotificationPr
       </div>
       
       <div class="section">
-        <div class="section-title">🎯 Project Details</div>
+        <div class="section-title">Project Details</div>
         <div class="detail-row">
           <span class="detail-label">Website URL:</span>
           <span class="detail-value"><a href="${websiteUrl}" target="_blank" style="color: #007bff; text-decoration: none;">${websiteUrl}</a></span>
@@ -171,7 +171,7 @@ export function renderAdminOrderNotificationHTML(props: AdminOrderNotificationPr
       </div>
       
       <div class="section">
-        <div class="section-title">🔑 Target Keywords</div>
+        <div class="section-title">Target Keywords</div>
         <div class="keywords-list">
           <div class="keyword-item">1. <strong>${keyword1}</strong> (Main Keyword)</div>
           ${keyword2 ? `<div class="keyword-item">2. ${keyword2}</div>` : ''}
@@ -180,10 +180,10 @@ export function renderAdminOrderNotificationHTML(props: AdminOrderNotificationPr
       </div>
       
       <div class="section">
-        <div class="section-title">📋 Campaign Status</div>
+        <div class="section-title">Campaign Status</div>
         <div class="detail-row">
           <span class="detail-label">Status:</span>
-          <span class="detail-value"><strong style="color: #28a745;">✅ Ready for Execution</strong></span>
+          <span class="detail-value"><strong style="color: #28a745;">Ready for Execution</strong></span>
         </div>
         <div class="detail-row">
           <span class="detail-label">Submitted:</span>

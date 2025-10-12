@@ -114,8 +114,6 @@ export function renderCustomerProjectConfirmationHTML(props: CustomerProjectConf
     </div>
     
     <div class="content">
-      <div class="success-icon">✅</div>
-      
       <p>Dear${customerName ? ` ${customerName}` : ' customer'},</p>
       
       <p>Thank you! We have successfully received your project details and your SEO campaign is now queued for execution.</p>
@@ -145,7 +143,7 @@ export function renderCustomerProjectConfirmationHTML(props: CustomerProjectConf
       </div>
       
       <div class="timeline">
-        <div class="timeline-title">⏱️ What Happens Next?</div>
+        <div class="timeline-title">What Happens Next?</div>
         <ol style="margin: 10px 0; padding-left: 20px; color: #856404;">
           <li>Our team will review your project details (within 24 hours)</li>
           <li>We'll start building high-quality backlinks to your website</li>

@@ -130,7 +130,7 @@ export async function sendAdminOrderNotification(projectData: ProjectSubmissionD
     const { data, error } = await resend.emails.send({
       from: 'Rankings Boost NZ Orders <orders@rankingsboost.co.nz>',
       to: ['hello@rankingsboost.co.nz'],
-      subject: `🎉 New Order: ${projectData.planName} - ${projectData.customerEmail}`,
+      subject: `New Order: ${projectData.planName} - ${projectData.customerEmail}`,
       html: emailHTML,
       replyTo: projectData.customerEmail
     });
