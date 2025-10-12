@@ -1,0 +1,250 @@
+---
+// Pricing section for Boost SEO - Professional design
+import StripeCheckout from './StripeCheckout.tsx';
+---
+
+<section id="pricing" class="py-20 bg-gray-50">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-16">
+      <div class="text-mono text-sm text-gray-500 mb-4">[ PLANS ]</div>
+      <h2 class="text-headline brutalist-text mb-6">
+        CHOOSE YOUR<br />
+        BOOST PACKAGE
+      </h2>
+      <p class="text-lg text-gray-600 mb-6">
+        Simple and transparent plans. All include our 100% money-back guarantee if it doesn't work.
+      </p>
+
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- 1 Day Plan -->
+      <div class="card">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <div class="text-mono text-sm text-gray-500 mb-1">QUICK TEST</div>
+            <div class="font-bold text-gray-900">1 Day</div>
+          </div>
+          <div class="w-12 h-12 bg-gray-200 text-gray-600 text-mono font-bold flex items-center justify-center text-sm">
+            1D
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex items-center gap-2 mb-1">
+            <div class="text-lg text-gray-400 line-through">$150</div>
+            <div class="text-3xl font-black text-gray-900">$99</div>
+            <div class="bg-gray-700 text-white px-2 py-1 text-xs font-bold rounded">-34%</div>
+          </div>
+          <div class="text-sm text-gray-600">24-hour test</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">⚡ Quick results, may not sustain</div>
+        </div>
+        
+        <div class="space-y-3 mb-8 text-sm">
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>1 URL + 1 keyword</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>1-day campaign</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Basic report</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Email support</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Money-back guarantee</span>
+          </div>
+        </div>
+        
+        <StripeCheckout 
+          planName="1 Day"
+          planPrice={99}
+          buttonText="TEST 1 DAY"
+          buttonClass="btn btn-outline w-full"
+          client:load
+        />
+      </div>
+
+      <!-- 3 Days Plan (Recommended) -->
+      <div class="card relative border-orange-500 border-2">
+        <div class="absolute -top-3 left-4">
+          <div class="bg-orange-500 text-white px-3 py-1 text-mono text-xs font-bold">
+            RECOMMENDED
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <div class="text-mono text-sm text-gray-500 mb-1">INTENSIVE</div>
+            <div class="font-bold text-gray-900">3 Days</div>
+          </div>
+          <div class="w-12 h-12 bg-orange-500 text-white text-mono font-bold flex items-center justify-center text-sm">
+            3D
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex items-center gap-2 mb-1">
+            <div class="text-lg text-gray-400 line-through">$350</div>
+            <div class="text-3xl font-black" style="color: var(--color-primary);">$229</div>
+            <div class="bg-gray-700 text-white px-2 py-1 text-xs font-bold rounded">-35%</div>
+          </div>
+          <div class="text-sm text-gray-600">Concentrated boost</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">🎯 Ideal standard for stable rankings</div>
+        </div>
+        
+        <div class="space-y-3 mb-8 text-sm">
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>1 URL + up to 3 keywords</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>3-day campaign</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Detailed report</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Priority support</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Concentrated signals</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-orange-500 mr-3">★</span>
+            <span class="font-semibold">Best value for money</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Rankings consolidation</span>
+          </div>
+        </div>
+        
+        <StripeCheckout 
+          planName="3 Days"
+          planPrice={229}
+          buttonText="START 3 DAYS"
+          buttonClass="btn btn-primary w-full"
+          client:load
+        />
+      </div>
+
+      <!-- 1 Week Plan -->
+      <div class="card">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <div class="text-mono text-sm text-gray-500 mb-1">COMPLETE</div>
+            <div class="font-bold text-gray-900">1 Week</div>
+          </div>
+          <div class="w-12 h-12 bg-gray-900 text-white text-mono font-bold flex items-center justify-center text-sm">
+            7D
+          </div>
+        </div>
+        
+        <div class="mb-6">
+          <div class="flex items-center gap-2 mb-1">
+            <div class="text-lg text-gray-400 line-through">$750</div>
+            <div class="text-3xl font-black text-gray-900">$499</div>
+            <div class="bg-gray-700 text-white px-2 py-1 text-xs font-bold rounded">-33%</div>
+          </div>
+          <div class="text-sm text-gray-600">Maximum impact</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">🚀 Lasting and consolidated rankings</div>
+        </div>
+        
+        <div class="space-y-3 mb-8 text-sm">
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>1 URL + up to 3 keywords</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>7-day campaign</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Complete report</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Priority support</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Maximum signal concentration</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Continuous monitoring</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-blue-500 mr-3">★</span>
+            <span class="font-semibold">Most lasting rankings</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-green-500 mr-3">✓</span>
+            <span>Natural traffic pattern</span>
+          </div>
+        </div>
+        
+        <StripeCheckout 
+          planName="1 Week"
+          planPrice={499}
+          buttonText="START 1 WEEK"
+          buttonClass="btn btn-outline w-full"
+          client:load
+        />
+      </div>
+    </div>
+
+    <!-- Guarantee -->
+    <div class="mt-16">
+      <div class="bg-black text-white p-8 rounded-lg">
+        <div class="text-center mb-6">
+          <div class="text-mono text-sm text-gray-400 mb-2">[ GUARANTEE ]</div>
+          <h3 class="text-xl font-bold mb-4">
+            100% Money Back
+          </h3>
+          <p class="text-gray-300 max-w-2xl mx-auto mb-4">
+            If your page doesn't improve in rankings during the campaign + 2 days, 
+            we refund 100% of the amount. Zero risks for you.
+          </p>
+          <a 
+            href="/guarantee" 
+            class="text-orange-400 hover:text-orange-300 text-sm underline transition-colors"
+          >
+            See complete guarantee terms →
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-center">
+          <div>
+            <div class="text-green-400 font-bold text-mono mb-2">ZERO RISKS</div>
+            <div class="text-sm text-gray-400">Full refund guarantee</div>
+          </div>
+          <div>
+            <div class="text-orange-400 font-bold text-mono mb-2">RESULTS</div>
+            <div class="text-sm text-gray-400">Or your money back</div>
+          </div>
+          <div>
+            <div class="text-blue-400 font-bold text-mono mb-2">TRUST</div>
+            <div class="text-sm text-gray-400">Proven and safe method</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

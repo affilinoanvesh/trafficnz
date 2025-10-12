@@ -1,0 +1,21 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import GuaranteeTerms from '../components/GuaranteeTerms.astro';
+---
+
+<BaseLayout 
+  title="Money-Back Guarantee - Boost SEO" 
+  description="Complete terms of our 100% money-back guarantee. Learn all requirements and conditions for refund eligibility."
+>
+  <Header />
+  
+  <main>
+    <GuaranteeTerms />
+  </main>
+  
+  <Footer />
+</BaseLayout>

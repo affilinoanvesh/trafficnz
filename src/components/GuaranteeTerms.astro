@@ -1,0 +1,239 @@
+---
+// Guarantee Terms section with vanilla JavaScript for reliability
+const eligibilityRequirements = {
+  title: "Eligibility Requirements",
+  content: [
+    "Your site must have a Domain Authority (DA) of 30 or higher according to Ahrefs.",
+    "You must provide at least 1 keyword and up to 3 keywords for rankings tracking.",
+    "Your site must be ranked within the first 2-3 pages of Google (positions 1-30) for these keywords before starting the campaign.",
+    "The keywords must be relevant to the target location specified in your campaign.",
+    "Your site must have existing organic traffic from the target location.",
+    "The site must be active and accessible throughout the entire campaign period.",
+    "The provided keywords must be relevant to the content of the target page."
+  ]
+};
+
+const disqualifications = {
+  title: "Disqualifications",
+  content: [
+    "Any of the provided keywords improve in rankings at any time during the campaign + 2 days.",
+    "Your site being deindexed or penalized by Google during the campaign period.",
+    "You submit a third-party (parasite) site that is penalized by Google.",
+    "You engage in other manipulative tactics during the campaign period + 2 days (e.g., black-hat link building, spam, etc.).",
+    "Significant changes to the target page content during the campaign.",
+    "Simultaneous use of other SEO services or traffic boost during the campaign.",
+    "Providing false or incorrect information about the site or keywords."
+  ]
+};
+
+const claimProcess = {
+  title: "How to Request a Refund",
+  content: [
+    "Send us a message through the order details page.",
+    "Provide before and after ranking screenshots from the Boost SEO window from a reputable SEO tool (Ahrefs, Semrush, etc.).",
+    "Include evidence that none of the keywords improved in position during the campaign period + 2 days.",
+    "Confirm that none of the disqualification conditions apply to your case.",
+    "If you meet the conditions and none of the disqualifications apply, a refund will be processed within 7 business days."
+  ]
+};
+
+const sections = [
+  { key: 'eligibility', data: eligibilityRequirements },
+  { key: 'disqualifications', data: disqualifications },
+  { key: 'claim', data: claimProcess }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container">
+    <!-- Header -->
+    <div class="max-w-4xl mx-auto mb-16">
+      <div class="text-center mb-12">
+        <div class="text-mono text-sm text-gray-500 mb-4">[ DETAILED GUARANTEE ]</div>
+        <h1 class="text-4xl font-black brutalist-text mb-6 text-gray-900">
+          100% MONEY BACK
+          <br />
+          <span class="text-orange-500">TERMS & CONDITIONS</span>
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          If your page doesn't improve in rankings during the campaign duration + 2 days, 
+          we refund 100% of the amount — as long as you meet the eligibility requirements 
+          below and none of the disqualifications apply.
+        </p>
+      </div>
+
+      <!-- Main Guarantee Box -->
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-200 rounded-lg p-8 mb-12">
+        <div class="flex items-start">
+          <div class="text-orange-500 mr-4 mt-1 text-2xl">🛡️</div>
+          <div>
+            <h2 class="text-xl font-bold text-orange-800 mb-3">
+              Our Guarantee Promise
+            </h2>
+            <p class="text-orange-700 leading-relaxed">
+              <strong>If your page doesn't improve in rankings</strong> during the campaign duration + 2 days, 
+              we offer a full 100% refund of the amount paid. This guarantee is valid only for 
+              campaigns that meet all eligibility criteria listed below.
+            </p>
+            <div class="mt-4 p-4 bg-white rounded border border-orange-200">
+              <div class="text-orange-800 font-semibold text-sm">
+                ⏱️ Guarantee Period: Campaign duration + 48 additional hours
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms Sections -->
+    <div class="max-w-4xl mx-auto space-y-6">
+      {sections.map((section, index) => (
+        <div 
+          class="border border-gray-200 rounded-lg overflow-hidden guarantee-item"
+          data-index={index}
+        >
+          <button
+            type="button"
+            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-150 flex justify-between items-center cursor-pointer guarantee-button"
+          >
+            <h3 class="text-lg font-semibold text-gray-900">{section.data.title}</h3>
+            <div
+              class="w-6 h-6 flex items-center justify-center transform transition-transform duration-200 guarantee-icon"
+            >
+              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+          
+          <div class="guarantee-content overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-6 py-4 bg-white">
+              <ul class="space-y-3">
+                {section.data.content.map((item) => (
+                  <li class="flex items-start">
+                    <span class="text-orange-500 mr-3 mt-1 flex-shrink-0">•</span>
+                    <span class="text-gray-700 text-sm leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Important Notice -->
+    <div class="max-w-4xl mx-auto mt-12">
+      <div class="bg-red-50 border-l-4 border-red-500 p-6">
+        <div class="flex items-start">
+          <div class="text-red-500 mr-3 mt-1">⚠️</div>
+          <div>
+            <div class="font-bold text-red-800 mb-2">IMPORTANT ABOUT THE NATURE OF THE SERVICE</div>
+            <p class="text-red-700 text-sm leading-relaxed">
+              <strong>Boost SEO is a ranking potential testing service.</strong> 
+              The results are temporary and serve to evaluate how your page responds to increased interest signals.
+              <br /><br />
+              <strong>After the campaign ends:</strong> Rankings may naturally sustain if your page has 
+              real organic potential, or may return to original levels. This depends on factors such as domain 
+              authority, content quality, and keyword competitiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="bg-black text-white p-8 rounded-lg text-center">
+        <div class="text-mono text-sm text-gray-400 mb-2">[ SUPPORT ]</div>
+        <h3 class="text-xl font-bold mb-4">
+          Questions about the Guarantee?
+        </h3>
+        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+          Our team is available to clarify any questions about the guarantee terms 
+          before or after contracting the service.
+        </p>
+        <a
+          href="mailto:support@boostseo.co.nz"
+          class="btn btn-primary"
+        >
+          CONTACT SUPPORT
+        </a>
+      </div>
+    </div>
+
+    <!-- Legal Disclaimer -->
+    <div class="max-w-4xl mx-auto mt-12 text-center">
+      <p class="text-xs text-gray-500 leading-relaxed">
+        These terms are subject to change without prior notice. The most updated version 
+        will always be available on our website. Boost SEO reserves the right to 
+        evaluate each refund request individually and at its discretion.
+        <br /><br />
+        Last updated: {new Date().toLocaleDateString('en-AU')}
+      </p>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  // Guarantee Terms dropdown functionality
+  function initGuarantee() {
+    const guaranteeButtons = document.querySelectorAll('.guarantee-button');
+    
+    guaranteeButtons.forEach((button) => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const guaranteeItem = button.closest('.guarantee-item');
+        const content = guaranteeItem.querySelector('.guarantee-content');
+        const icon = guaranteeItem.querySelector('.guarantee-icon');
+        
+        if (!content || !icon) return;
+        
+        // Check if this item is currently open
+        const isOpen = content.classList.contains('guarantee-open');
+        
+        // Close all items first
+        document.querySelectorAll('.guarantee-content').forEach(c => {
+          c.classList.remove('guarantee-open');
+          c.style.maxHeight = '0px';
+          c.style.opacity = '0';
+        });
+        
+        document.querySelectorAll('.guarantee-icon').forEach(i => {
+          i.style.transform = 'rotate(0deg)';
+        });
+        
+        // If it wasn't open, open this item
+        if (!isOpen) {
+          content.classList.add('guarantee-open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.opacity = '1';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  }
+  
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGuarantee);
+  } else {
+    initGuarantee();
+  }
+  
+  // Re-initialize on Astro page navigation
+  document.addEventListener('astro:page-load', initGuarantee);
+</script>
+
+<style>
+  .guarantee-content {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .guarantee-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+</style>
+

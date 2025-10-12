@@ -1,0 +1,85 @@
+---
+import '../styles/global.css'
+import { GoogleTagmanager, GoogleTagmanagerNoscript } from '@digi4care/astro-google-tagmanager';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const { 
+  title = "Boost SEO - Increase Your Google Ranking in 48 Hours", 
+  description = "Increase your website's Google ranking in just 48 hours with our advanced engagement signals. Money-back guarantee.",
+  noindex = false
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <GoogleTagmanager id="GTM-MT2H7CT8" />
+    
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ff4500" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" as="style" onload="this.setAttribute('rel','stylesheet')" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" /></noscript>
+    
+    <!-- Performance hints -->
+    <link rel="dns-prefetch" href="https://js.stripe.com" />
+    <link rel="preconnect" href="https://api.stripe.com" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Boost SEO",
+        "description": "Service to increase Google ranking in 48 hours",
+        "applicationCategory": "SEO Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "category": "SEO Service"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <GoogleTagmanagerNoscript id="GTM-MT2H7CT8" />
+    
+    <div class="min-h-screen flex flex-col">
+      <slot />
+    </div>
+    
+    <!-- Analytics placeholder -->
+    <script>
+      // Analytics code will go here
+    </script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+---
+export const prerender = false;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import KeywordRankings from '../components/KeywordRankings.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import FAQ from '../components/FAQ.astro';
+import Pricing from '../components/Pricing.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Boost SEO - Increase Your Google Ranking in 48 Hours"
+  description="Increase your website's Google ranking in just 48 hours with our advanced engagement signals. Money-back guarantee. Start now!"
+>
+  <Header />
+  
+  <main>
+    <Hero />
+    <KeywordRankings />
+    <HowItWorks />
+    <Pricing />
+    
+    <!-- Guarantee Terms Section -->
+    <section id="guarantee" class="py-20 bg-gray-50">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <div class="text-mono text-sm text-gray-500 mb-4">[ GUARANTEE TERMS ]</div>
+            <h2 class="text-headline brutalist-text mb-6">
+              100% MONEY<br />
+              BACK GUARANTEE
+            </h2>
+            <p class="text-lg text-gray-600">
+              Full guarantee if your ranking doesn't improve. No catches, no complications.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="card">
+              <div class="flex items-center mb-6">
+                <div class="w-8 h-8 bg-green-500 text-white text-mono font-bold flex items-center justify-center text-sm mr-3">
+                  ✓
+                </div>
+                <div class="text-mono text-sm text-gray-500">REQUIREMENTS</div>
+              </div>
+              
+              <ul class="space-y-3 text-sm">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">•</span>
+                  <span>Domain Authority 30+ (Ahrefs)</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">•</span>
+                  <span>Ranking positions 1-30</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">•</span>
+                  <span>Keywords relevant to target location</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">•</span>
+                  <span>Existing traffic from target location</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">•</span>
+                  <span>Site not penalized by Google</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="card">
+              <div class="flex items-center mb-6">
+                <div class="w-8 h-8 bg-red-500 text-white text-mono font-bold flex items-center justify-center text-sm mr-3">
+                  ✗
+                </div>
+                <div class="text-mono text-sm text-gray-500">DISQUALIFICATION</div>
+              </div>
+              
+              <ul class="space-y-3 text-sm">
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">•</span>
+                  <span>Any improvement during campaign + 2 days</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">•</span>
+                  <span>Site penalized or deindexed</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">•</span>
+                  <span>Use of parallel black-hat tactics</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-3 mt-1">•</span>
+                  <span>Site changes during campaign</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-black text-white p-6 rounded-lg">
+            <div class="text-center mb-4">
+              <div class="text-mono text-sm text-gray-400 mb-2">[ REFUND PROCESS ]</div>
+              <h3 class="text-lg font-bold">How to Request</h3>
+            </div>
+            
+            <div class="max-w-2xl mx-auto text-sm text-gray-300">
+              <p class="mb-4">
+                Send before/after ranking screenshots using reliable tools (Ahrefs, Semrush, etc.) 
+                through our support system.
+              </p>
+              <div class="text-center text-gray-400 text-xs">
+                ⚡ Refund processed within 5 business days after approval
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <FAQ />
+    
+    <!-- CTA Section -->
+    <section id="boost" class="py-20 bg-white">
+      <div class="container">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="text-mono text-sm text-gray-500 mb-4">[ START NOW ]</div>
+          <h2 class="text-headline brutalist-text mb-8">
+            READY TO<br />
+            DOMINATE GOOGLE?
+          </h2>
+          
+          <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div class="text-center">
+                <div class="text-3xl font-black mb-2" style="color: var(--color-primary);">48H</div>
+                <div class="text-sm text-gray-600">Time to results</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-black text-gray-900 mb-2">100%</div>
+                <div class="text-sm text-gray-600">Money-back guarantee</div>
+              </div>
+            </div>
+            
+            <p class="text-gray-700 mb-8 max-w-2xl mx-auto">
+              Professional ranking boost system used by New Zealand businesses. 
+              <strong>Start today.</strong>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="#pricing" class="btn btn-primary text-lg px-8 py-4">
+                VIEW PLANS
+              </a>
+              <a href="mailto:contact@boostseo.co.nz" class="btn btn-outline text-lg px-8 py-4">
+                SPEAK WITH SPECIALIST
+              </a>
+            </div>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
+            <div class="flex items-center">
+              <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              <span>No contracts</span>
+            </div>
+            <div class="flex items-center">
+              <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              <span>Start in 24h</span>
+            </div>
+            <div class="flex items-center">
+              <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              <span>100% Safe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
