@@ -1,11 +1,8 @@
 import type { APIRoute } from 'astro';
-
-// Formspree form endpoint
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xjkegrpd';
+import { sendAdminOrderNotification, sendCustomerProjectConfirmation } from '../../utils/email-service';
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-
     // Parse request body
     let submitData;
     try {
@@ -29,7 +26,6 @@ export const POST: APIRoute = async ({ request }) => {
     for (const field of requiredFields) {
       if (!submitData[field]) {
         console.error(`Missing required field: ${field}`, submitData);
-        console.error('Missing required field for Formspree submission');
         return new Response(
           JSON.stringify({ 
             error: `Required field missing: ${field}`,
@@ -44,73 +40,58 @@ export const POST: APIRoute = async ({ request }) => {
       }
     }
 
-    // Prepare data for Formspree submission
-    const formspreeData = {
-      // Payment information
-      email: submitData['Email'],
-      plan: submitData['Plan'],
-      amount_paid: submitData['Amount Paid'],
-      payment_id: submitData['Payment ID'],
-      payment_date: submitData['Payment Date'],
-      
-      // Project details
-      website_url: submitData['Website URL'],
-      keyword_1: submitData['Keyword 1'],
-      keyword_2: submitData['Keyword 2'] || '',
-      keyword_3: submitData['Keyword 3'] || '',
-      total_keywords: submitData['Total Keywords'],
-      campaign_status: submitData['Campaign Status'] || 'Ready for Execution',
-      submission_date: submitData['Submission Date'] || new Date().toISOString(),
-      
-      // Additional Formspree fields
-      _subject: `New SEO Campaign - ${submitData['Plan']} - ${submitData['Email']}`,
-      _replyto: submitData['Email'],
-      _cc: 'hello@rankingsboost.co.nz' // Optional: CC to your support email
+    // Prepare project submission data
+    const projectData = {
+      customerName: submitData['Customer Name'] || undefined, // Optional field
+      customerEmail: submitData['Email'],
+      planName: submitData['Plan'],
+      planPrice: parseFloat(submitData['Amount Paid']) || 0,
+      websiteUrl: submitData['Website URL'],
+      keyword1: submitData['Keyword 1'],
+      keyword2: submitData['Keyword 2'] || undefined,
+      keyword3: submitData['Keyword 3'] || undefined,
+      totalKeywords: parseInt(submitData['Total Keywords']) || 1,
+      paymentId: submitData['Payment ID'],
+      paymentDate: submitData['Payment Date'] || new Date().toISOString()
     };
 
-    // Submit to Formspree
-    const formspreeResponse = await fetch(FORMSPREE_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(formspreeData)
-    });
+    console.log('📧 Sending project submission emails...');
 
-    if (!formspreeResponse.ok) {
-      const errorData = await formspreeResponse.json();
-      console.error('Formspree API Error:', {
-        status: formspreeResponse.status,
-        statusText: formspreeResponse.statusText,
-        errorData,
-        config: {
-          endpoint: FORMSPREE_ENDPOINT
-        }
-      });
-      
-      return new Response(
-        JSON.stringify({ 
-          error: `Failed to send data: ${errorData.error || formspreeResponse.statusText}`,
-          code: 'FORMSPREE_API_ERROR',
-          status: formspreeResponse.status,
-          details: errorData
-        }),
-        { 
-          status: 500,
-          headers: { 'Content-Type': 'application/json' }
-        }
-      );
+    // Send email to admin (hello@rankingsboost.co.nz)
+    const adminEmailResult = await sendAdminOrderNotification(projectData);
+    
+    if (!adminEmailResult.success) {
+      console.error('❌ Failed to send admin notification:', adminEmailResult.error);
+      // Continue anyway - we don't want to fail the submission
+    } else {
+      console.log('✅ Admin notification sent successfully');
     }
 
-    const result = await formspreeResponse.json();
-    console.log('✅ Form submitted to Formspree successfully:', result);
+    // Send confirmation email to customer
+    const customerEmailResult = await sendCustomerProjectConfirmation(projectData);
+    
+    if (!customerEmailResult.success) {
+      console.error('❌ Failed to send customer confirmation:', customerEmailResult.error);
+      // Continue anyway - we don't want to fail the submission
+    } else {
+      console.log('✅ Customer confirmation sent successfully');
+    }
+
+    // Determine response based on email results
+    const emailStatus = {
+      adminEmail: adminEmailResult.success ? 'sent' : 'failed',
+      customerEmail: customerEmailResult.success ? 'sent' : 'failed',
+      adminMessageId: adminEmailResult.messageId,
+      customerMessageId: customerEmailResult.messageId
+    };
+
+    console.log('✅ Project submission processed:', emailStatus);
     
     return new Response(
       JSON.stringify({ 
         success: true,
-        message: 'Data submitted successfully',
-        submissionId: result.id || 'formspree_submission'
+        message: 'Project details submitted successfully',
+        emailStatus: emailStatus
       }),
       { 
         status: 200,
@@ -124,7 +105,8 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(
       JSON.stringify({ 
         error: 'Internal server error',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
+        details: error instanceof Error ? error.message : 'Unknown error'
       }),
       { 
         status: 500,
