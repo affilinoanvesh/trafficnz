@@ -64,7 +64,7 @@ export async function sendOrderConfirmationEmail(orderData: OrderConfirmationDat
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'Rankings Boost New Zealand <noreply@rankingsboost.co.nz>',
+      from: 'Rankings Boost New Zealand <hello@rankingsboost.co.nz>',
       to: [orderData.customerEmail],
       subject: `Payment Confirmation - ${orderData.planName}`,
       html: emailHTML,
@@ -189,7 +189,7 @@ export async function sendCustomerProjectConfirmation(projectData: ProjectSubmis
 
     // Send email via Resend to customer
     const { data, error } = await resend.emails.send({
-      from: 'Rankings Boost New Zealand <noreply@rankingsboost.co.nz>',
+      from: 'Rankings Boost New Zealand <hello@rankingsboost.co.nz>',
       to: [projectData.customerEmail],
       subject: `Project Details Confirmed - ${projectData.planName}`,
       html: emailHTML,
