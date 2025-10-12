@@ -102,7 +102,7 @@ export const POST: APIRoute = async ({ request }) => {
             currency: 'nzd',
             product_data: {
               name: planName,
-              description: `Boost SEO - ${planName}`,
+              description: `Rankings Boost - ${planName}`,
             },
             unit_amount: Math.round(planPrice * 100), // Amount in cents
           },

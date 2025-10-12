@@ -133,7 +133,7 @@ export default function EmailModal({
               className={`w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 ${
                 formErrors.email ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="seu@email.com"
+              placeholder="your@email.co.nz"
               required
               disabled={loading}
             />
