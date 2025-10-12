@@ -1,28 +1,34 @@
-# build output
+# Build output
 dist/
-# generated types
+.output/
 .astro/
+.netlify/
 
-# dependencies
+# Dependencies
 node_modules/
 
-# logs
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
 
-
-# environment variables
+# Environment variables
 .env
+.env.local
 .env.production
 
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
+# IDE settings
 .idea/
+.vscode/
 
-# Local Netlify folder
-.netlify
-.env.local
+# Playwright
+.playwright-mcp/
+
+# Temporary files
+*.tmp
+*.temp

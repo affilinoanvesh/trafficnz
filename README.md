@@ -1,136 +1,137 @@
-# Boost SEO Website
+# SEO Boost Service - New Zealand
 
-A modern, fast, and SEO-optimized website built with [Astro.js](https://astro.build/).
+A modern, fast, and SEO-optimized website built with Astro.js for providing SEO ranking boost services.
 
 ## 🚀 Features
 
 - **Server-Side Rendering (SSR)** - Optimized for SEO and performance
-- **React Integration** - For interactive components when needed
-- **Tailwind CSS** - Modern utility-first CSS framework
+- **React Integration** - For interactive components and forms
+- **Stripe Integration** - Secure payment processing with NZD currency
+- **Email System** - Automated order processing and notifications
+- **Responsive Design** - Modern UI with Tailwind CSS
 - **TypeScript** - Full type safety and better development experience
-- **Automatic Sitemap Generation** - SEO optimization out of the box
-- **Fast Development** - Hot reload and instant updates
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Astro.js 5.13+
 - **UI Library**: React 19+
 - **Styling**: Tailwind CSS 4+
+- **Payments**: Stripe API
+- **Email**: Resend API
 - **Language**: TypeScript
-- **Package Manager**: npm
+- **Deployment**: Netlify
 
-## 📦 What's Included
+## 📦 Project Structure
 
-- **Astro**: Core framework for static site generation and SSR
-- **@astrojs/react**: React integration for interactive components
-- **@astrojs/sitemap**: Automatic sitemap generation
-- **Tailwind CSS**: Utility-first CSS framework
-- **TypeScript**: Type checking and enhanced development experience
-- **astro-seo**: SEO utilities for better search engine optimization
+```
+/
+├── public/
+│   ├── images/
+│   └── favicon files
+├── src/
+│   ├── components/
+│   │   ├── EmailModal.tsx
+│   │   ├── StripeCheckout.tsx
+│   │   ├── ProjectDetailsForm.tsx
+│   │   └── ...
+│   ├── layouts/
+│   │   └── BaseLayout.astro
+│   ├── pages/
+│   │   ├── api/
+│   │   │   ├── create-checkout-session.ts
+│   │   │   ├── submit-project.ts
+│   │   │   └── webhook.ts
+│   │   ├── index.astro
+│   │   ├── success.astro
+│   │   └── ...
+│   └── styles/
+│       └── global.css
+├── astro.config.mjs
+├── package.json
+└── tailwind.config.mjs
+```
 
-## 🏃‍♂️ Quick Start
+## 🏃‍♂️ Development
 
-### Development Server
-Start the development server with hot reload:
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
 Your site will be available at `http://localhost:4321`
 
 ### Build for Production
-Create a production build:
 
 ```bash
+# Build the project
 npm run build
-```
 
-### Preview Production Build
-Preview the production build locally:
-
-```bash
+# Preview production build
 npm run preview
 ```
 
-### Type Checking
-Run TypeScript checking:
+## ⚙️ Configuration
 
-```bash
-npm run check
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+# Stripe Configuration
+STRIPE_SECRET_KEY=sk_live_...
+PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+
+# Email Configuration  
+RESEND_API_KEY=re_...
+
+# Site Configuration
+SITE_URL=https://yourdomain.com
 ```
 
-Watch for type errors during development:
+### Stripe Setup
 
-```bash
-npm run check:watch
-```
-
-## 📁 Project Structure
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Counter.tsx      # Example React component
-│   ├── layouts/
-│   │   └── Layout.astro     # Base layout component
-│   ├── pages/
-│   │   └── index.astro      # Homepage
-│   └── styles/
-│       └── global.css       # Global styles (Tailwind)
-├── astro.config.mjs         # Astro configuration
-├── package.json
-├── tailwind.config.js       # Tailwind configuration
-└── tsconfig.json           # TypeScript configuration
-```
-
-## 🎨 Styling
-
-This project uses Tailwind CSS for styling. The global stylesheet is imported in the Layout component and includes Tailwind's base styles.
-
-## ⚡ Performance
-
-Astro provides excellent performance out of the box:
-- **Zero JavaScript by default** - Only ships JS when needed
-- **Automatic code splitting** - Optimal loading performance
-- **Built-in optimizations** - Images, CSS, and more
-- **SEO-friendly** - Server-side rendering for better search rankings
-
-## 🔧 Configuration
-
-### Site URL
-Update the `site` field in `astro.config.mjs` with your actual domain for proper sitemap generation:
-
-```js
-export default defineConfig({
-  site: 'https://boostseo.co.nz',
-  // ...
-});
-```
-
-### Customization
-- **Tailwind**: Modify `tailwind.config.js` for custom styles
-- **TypeScript**: Adjust `tsconfig.json` for TypeScript settings
-- **Astro**: Configure integrations in `astro.config.mjs`
-
-## 📚 Learn More
-
-- [Astro Documentation](https://docs.astro.build/)
-- [Astro Discord](https://astro.build/chat)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [React Documentation](https://react.dev/)
+1. Create a Stripe account
+2. Get your API keys from the Stripe dashboard
+3. Set up webhook endpoints for payment processing
+4. Configure products and pricing in your Stripe dashboard
 
 ## 🚀 Deployment
 
-This Astro project can be deployed to various platforms:
+This project is configured for Netlify deployment:
 
-- **Netlify**: Zero-config deployment
-- **Vercel**: Perfect for React components
-- **GitHub Pages**: Free static hosting
-- **AWS**: Enterprise-grade scaling
-- **Any static host**: Works everywhere
+1. Connect your GitHub repository to Netlify
+2. Set environment variables in Netlify dashboard
+3. Deploy automatically on push to main branch
 
-Refer to the [Astro deployment guide](https://docs.astro.build/en/guides/deploy/) for detailed instructions.
+## 📚 Key Components
+
+- **StripeCheckout**: Handles payment processing
+- **EmailModal**: Collects customer information
+- **ProjectDetailsForm**: Post-payment project setup
+- **API Routes**: Handle payments, webhooks, and form submissions
+
+## 🔒 Security
+
+- Environment variables for sensitive data
+- Stripe webhook signature verification
+- Input validation and sanitization
+- HTTPS enforcement in production
+
+## 📄 License
+
+Private - All rights reserved
+
+## 🤝 Support
+
+For technical support or questions, please contact the development team.
