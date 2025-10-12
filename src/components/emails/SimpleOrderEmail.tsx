@@ -100,7 +100,14 @@ export function renderSimpleOrderEmailHTML(props: SimpleOrderEmailProps): string
     
     <div class="footer">
       <p><strong>Rankings Boost New Zealand</strong></p>
-      <p>Questions? Contact us: hello@rankingsboost.co.nz</p>
+      <p>Professional SEO Services | Auckland, New Zealand</p>
+      <p>Contact: hello@rankingsboost.co.nz</p>
+      <hr style="border: none; border-top: 1px solid #eee; margin: 15px 0;">
+      <p style="font-size: 12px; color: #888;">
+        This email was sent regarding your SEO service purchase. By using our services, you agree to our terms and conditions. 
+        All campaigns are executed professionally with white-hat SEO techniques. Results may vary based on competition and market conditions.
+        If you have any questions, please contact our support team.
+      </p>
     </div>
   </div>
 </body>

@@ -194,7 +194,14 @@ export function renderAdminOrderNotificationHTML(props: AdminOrderNotificationPr
     
     <div class="footer">
       <p><strong>Rankings Boost New Zealand</strong></p>
-      <p>Admin Notification System</p>
+      <p>Professional SEO Services | Auckland, New Zealand</p>
+      <p>Admin Notification System | hello@rankingsboost.co.nz</p>
+      <hr style="border: none; border-top: 1px solid #eee; margin: 15px 0;">
+      <p style="font-size: 12px; color: #888;">
+        This is an automated order notification. Please review the campaign details and begin execution within 24-48 hours.
+        All customer information is confidential. Campaign execution should follow our standard SEO procedures and quality guidelines.
+        Contact the customer directly for any clarifications needed.
+      </p>
     </div>
   </div>
 </body>

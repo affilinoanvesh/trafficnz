@@ -135,9 +135,9 @@ export function renderCustomerProjectConfirmationHTML(props: CustomerProjectConf
         <div class="detail-row">
           <span class="detail-label">Target Keywords:</span>
           <div class="keywords-list">
-            <div class="keyword-item">• ${keyword1}</div>
-            ${keyword2 ? `<div class="keyword-item">• ${keyword2}</div>` : ''}
-            ${keyword3 ? `<div class="keyword-item">• ${keyword3}</div>` : ''}
+            <div class="keyword-item">- ${keyword1}</div>
+            ${keyword2 ? `<div class="keyword-item">- ${keyword2}</div>` : ''}
+            ${keyword3 ? `<div class="keyword-item">- ${keyword3}</div>` : ''}
           </div>
         </div>
       </div>
@@ -159,7 +159,14 @@ export function renderCustomerProjectConfirmationHTML(props: CustomerProjectConf
     
     <div class="footer">
       <p><strong>Rankings Boost New Zealand</strong></p>
-      <p>Questions? Contact us: <a href="mailto:hello@rankingsboost.co.nz" style="color: #ff4500; text-decoration: none;">hello@rankingsboost.co.nz</a></p>
+      <p>Professional SEO Services | Auckland, New Zealand</p>
+      <p>Contact: hello@rankingsboost.co.nz</p>
+      <hr style="border: none; border-top: 1px solid #eee; margin: 15px 0;">
+      <p style="font-size: 12px; color: #888;">
+        Your SEO campaign will be executed using professional white-hat techniques. Campaign timelines are estimates and actual results may vary.
+        We will provide regular updates on progress. By proceeding, you agree to our service terms and conditions.
+        For support or questions, contact our team directly.
+      </p>
     </div>
   </div>
 </body>
