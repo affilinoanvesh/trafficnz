@@ -178,6 +178,143 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+      <div class="container">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <div class="text-mono text-sm text-gray-500 mb-4">[ OUR WORK ]</div>
+            <h2 class="text-headline brutalist-text mb-6">
+              WEBSITES WE'VE<br />
+              BUILT
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Real websites we've created for New Zealand businesses. 
+              Each designed to convert visitors into customers.
+            </p>
+          </div>
+          
+          <!-- Portfolio Grid - Larger Images -->
+          <div class="space-y-12">
+            <!-- Row 1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Wellness Website -->
+              <div class="card group hover:border-gray-300 transition-colors">
+                <div class="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                  <img 
+                    src="/images/websites/Wellness.png" 
+                    alt="Wellness Website" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 portfolio-image"
+                    draggable="false"
+                    oncontextmenu="return false;"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Wellness Center</h3>
+                </div>
+              </div>
+              
+              <!-- Dental Website -->
+              <div class="card group hover:border-gray-300 transition-colors">
+                <div class="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                  <img 
+                    src="/images/websites/dental.png" 
+                    alt="Dental Website" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 portfolio-image"
+                    draggable="false"
+                    oncontextmenu="return false;"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Dental Practice</h3>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Pets Website -->
+              <div class="card group hover:border-gray-300 transition-colors">
+                <div class="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                  <img 
+                    src="/images/websites/Pets.png" 
+                    alt="Pets Website" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 portfolio-image"
+                    draggable="false"
+                    oncontextmenu="return false;"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Pet Services</h3>
+                </div>
+              </div>
+              
+              <!-- HVAC Website -->
+              <div class="card group hover:border-gray-300 transition-colors">
+                <div class="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                  <img 
+                    src="/images/websites/HVAC.png" 
+                    alt="HVAC Website" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 portfolio-image"
+                    draggable="false"
+                    oncontextmenu="return false;"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">HVAC Services</h3>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Real Estate Website -->
+              <div class="card group hover:border-gray-300 transition-colors">
+                <div class="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                  <img 
+                    src="/images/websites/Realestate.png" 
+                    alt="Real Estate Website" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 portfolio-image"
+                    draggable="false"
+                    oncontextmenu="return false;"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Real Estate Agency</h3>
+                </div>
+              </div>
+              
+              <!-- Cleaning Website -->
+              <div class="card group hover:border-gray-300 transition-colors">
+                <div class="aspect-[4/3] overflow-hidden rounded-lg mb-4">
+                  <img 
+                    src="/images/websites/Cleaning.png" 
+                    alt="Cleaning Website" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 portfolio-image"
+                    draggable="false"
+                    oncontextmenu="return false;"
+                  />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Cleaning Services</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Call to Action -->
+          <div class="text-center mt-16">
+            <div class="bg-white p-8 rounded-lg border border-gray-200">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Ready to See Your Website?</h3>
+              <p class="text-gray-600 mb-6">Get a custom quote for your project. No obligation, just honest pricing.</p>
+              <a href="#contact" class="btn btn-primary">
+                GET FREE QUOTE
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Simple Process Section -->
     <section id="process" class="py-20 bg-white">
@@ -891,5 +1028,31 @@ import Footer from '../components/Footer.astro';
   
   .faq-icon {
     transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Prevent image interactions */
+  .portfolio-image {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+  }
+  
+  /* Prevent context menu on images */
+  .portfolio-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
   }
 </style>
